@@ -1,0 +1,4 @@
+data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in
+data/io.github.tfuxu.gotk4_meson.desktop.in.in
+data/io.github.tfuxu.gotk4_meson.gschema.xml.in
+data/ui/main_window.ui
