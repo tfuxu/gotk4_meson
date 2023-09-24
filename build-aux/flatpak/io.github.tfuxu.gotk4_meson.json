@@ -25,26 +25,15 @@
       "*.a"
   ],
   "build-options": {
+    "build-args": [
+      "--share=network"
+    ],
     "env": {
       "GOBIN": "/app/bin",
       "GOROOT": "/usr/lib/sdk/golang"
     }
   },
   "modules" : [
-      {
-          "name" : "blueprint-compiler",
-          "buildsystem" : "meson",
-          "cleanup": [
-              "*"
-          ],
-          "sources" : [
-              {
-                  "type" : "git",
-                  "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                  "tag" : "v0.10.0"
-              }
-          ]
-      },
       {
           "name" : "gotk4_meson",
           "builddir" : true,
@@ -53,7 +42,6 @@
               "-Dbuildtype=release"
           ],
           "sources" : [
-              "go-dependencies.json",
               {
                   "type" : "dir",
                   "path" : "../../."

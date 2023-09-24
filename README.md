@@ -74,4 +74,4 @@ meson devenv -C builddir ./bin/gotk4_meson
 - [ ] Get translations to work
 
 ## Notes:
-- It takes really long (around 30-40 minutes) to finish building Flatpak package without any cached libraries (see [#66](https://github.com/diamondburned/gotk4/issues/66) in gotk4)
+- It takes really long (around 40 minutes) to finish building Flatpak package without any cached libraries (see [#66](https://github.com/diamondburned/gotk4/issues/66) in gotk4)
