@@ -71,3 +71,7 @@ example/constants/constants.go
 
 # .mo files
 *.mo
+
+## flatpak-builder folders
+.flatpak-builder
+repo

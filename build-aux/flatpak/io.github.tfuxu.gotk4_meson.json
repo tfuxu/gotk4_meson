@@ -1,0 +1,64 @@
+{
+  "app-id" : "io.github.tfuxu.gotk4_meson",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version" : "45",
+  "sdk" : "org.gnome.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.golang"
+  ],
+  "command" : "gotk4_meson",
+  "finish-args" : [
+      "--share=ipc",
+      "--device=dri",
+      "--socket=fallback-x11",
+      "--socket=wayland"
+  ],
+  "cleanup" : [
+      "/include",
+      "/lib/pkgconfig",
+      "/man",
+      "/share/doc",
+      "/share/gtk-doc",
+      "/share/man",
+      "/share/pkgconfig",
+      "*.la",
+      "*.a"
+  ],
+  "build-options": {
+    "env": {
+      "GOBIN": "/app/bin",
+      "GOROOT": "/usr/lib/sdk/golang"
+    }
+  },
+  "modules" : [
+      {
+          "name" : "blueprint-compiler",
+          "buildsystem" : "meson",
+          "cleanup": [
+              "*"
+          ],
+          "sources" : [
+              {
+                  "type" : "git",
+                  "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                  "tag" : "v0.10.0"
+              }
+          ]
+      },
+      {
+          "name" : "gotk4_meson",
+          "builddir" : true,
+          "buildsystem" : "meson",
+          "config-opts": [
+              "-Dbuildtype=release"
+          ],
+          "sources" : [
+              "go-dependencies.json",
+              {
+                  "type" : "dir",
+                  "path" : "../../."
+              }
+          ]
+      }
+  ]
+}

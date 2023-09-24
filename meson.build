@@ -44,12 +44,16 @@ endif
 
 # Required dependencies
 dependency('glib-2.0')
-dependency('gtk4', version: '>= 4.5.0')
-dependency('libadwaita-1', version: '>= 1.2.0')
-dependency('pygobject-3.0', version: '>= 3.42.0')
+dependency('gtk4', version: '>= 4.10.0')
+
+go_root = run_command('printenv', 'GOROOT', check: false)
 
 # Find Go installation
-go_bin = find_program('go')
+if go_root.returncode() != 0
+  go_bin = find_program('go')
+else
+  go_bin = find_program(join_paths(go_root.stdout().strip(), 'bin', 'go'))
+endif
 
 module_sources = files(
   'go.mod',
