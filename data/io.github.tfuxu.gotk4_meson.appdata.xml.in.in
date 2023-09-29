@@ -17,19 +17,12 @@
   </description>
 
   <screenshots>
-    <screenshot type="default" width="3000" height="4000">
-      <caption>Cat no.1</caption>
-      <image type="source">https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tabby_cat_with_visible_nictitating_membrane.jpg/800px-Tabby_cat_with_visible_nictitating_membrane.jpg</image>
+    <screenshot type="default" width="328" height="366">
+      <image type="source">screenshots/screenshot-1.png</image>
     </screenshot>
 
-    <screenshot width="801" height="555">
-      <caption>Cat no.2</caption>
-      <image type="source">https://upload.wikimedia.org/wikipedia/commons/b/b5/1dayoldkitten.JPG</image>
-    </screenshot>
-
-    <screenshot width="554" height="594">
-      <caption>Cat no.3</caption>
-      <image type="source">https://upload.wikimedia.org/wikipedia/commons/4/45/Mainecoon-lap.jpg</image>
+    <screenshot width="600" height="484">
+      <image type="source">screenshots/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
@@ -59,7 +52,6 @@
 
   <keywords>
     <keyword>GTK4</keyword>
-    <keyword>Libadwaita</keyword>
   </keywords>"
 
   <releases>

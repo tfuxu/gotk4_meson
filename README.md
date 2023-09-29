@@ -38,8 +38,8 @@ flatpak-builder --install --system --force-clean repo/ build-aux/flatpak/io.gith
 
 The following packages are required to build this project:
 
-- Golang `go`
-- Gtk 4 `gtk4`
+- Golang >= 1.18 `go`
+- Gtk4 `gtk4`
 - Meson `meson`
 - Ninja `ninja-build`
 
@@ -74,4 +74,4 @@ meson devenv -C builddir ./bin/gotk4_meson
 - [ ] Get translations to work
 
 ## Notes:
-- It takes really long (around 40 minutes) to finish building Flatpak package without any cached libraries (see [#66](https://github.com/diamondburned/gotk4/issues/66) in gotk4)
+- ~~It takes really long (around 40 minutes) to finish building Flatpak package without any cached libraries (see [#66](https://github.com/diamondburned/gotk4/issues/66) in gotk4)~~ Build time should be reduced by half in [fdac04a](https://github.com/tfuxu/gotk4_meson/commit/fdac04a7b26afb57ed8d3295d645522a46037591)
