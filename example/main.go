@@ -11,14 +11,30 @@ import (
 	"github.com/diamondburned/gotk4/pkg/gtk/v4"
 )
 
-func main() {
+func init() {
+	// Set `XDG_DATA_DIRS` to <builddir>/data if running in devenv
+	if os.Getenv("MESON_DEVENV") == "1" {
+		var data_dirs string
+
+		if len(os.Getenv("XDG_DATA_DIRS")) != 0 {
+			data_dirs = os.Getenv("XDG_DATA_DIRS")
+		} else {
+			data_dirs = "/usr/local/share/:/usr/share/"
+		}
+
+		os.Setenv("XDG_DATA_DIRS", fmt.Sprintf("%s:%s", constants.DataDir, data_dirs))
+	}
+
+	// Load resources
 	resources, error := gio.ResourceLoad(filepath.Join(constants.PkgDataDir, "gotk4_meson.gresource"))
 	if error != nil {
 		fmt.Println(error)
 		os.Exit(1)
 	}
 	gio.ResourcesRegister(resources)
+}
 
+func main() {
 	settings := gio.NewSettings(constants.AppID)
 
 	app := gtk.NewApplication(constants.AppID, gio.ApplicationFlagsNone)
