@@ -79,14 +79,12 @@ subdir('po')
 subdir('example')
 
 gotk4_meson_build_path = join_paths(meson.current_source_dir(), 'example')
-sources = [module_sources, go_sources]
 
 # Compile project
 go_build = custom_target(
   'go-build',
   build_by_default: true,
   build_always_stale: true,
-  input: sources,
   output: meson.project_name(),
   console: true,
   install: true,

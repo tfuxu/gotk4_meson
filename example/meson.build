@@ -25,8 +25,3 @@ run_command(
   join_paths(meson.project_source_root(), 'example', 'constants', 'constants.go'),
   check: true
 )
-
-go_sources = files(
-  'main.go',
-  'constants/constants.go'
-)
