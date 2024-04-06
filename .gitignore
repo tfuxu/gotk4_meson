@@ -1,5 +1,12 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,meson,go
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,meson,go
+# Created by https://www.toptal.com/developers/gitignore/api/go,meson,visualstudiocode,flatpak
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,meson,visualstudiocode,flatpak
+
+### Flatpak ###
+.flatpak-builder
+build
+builddir
+build-dir
+repo
 
 ### Go ###
 # If you prefer the allow list template instead of the deny list, see community template:
@@ -22,7 +29,7 @@
 # vendor/
 
 # Go workspace file
-# go.work
+go.work
 
 ### Meson ###
 # subproject directories
@@ -32,9 +39,6 @@
 # Meson Directories
 meson-logs
 meson-private
-
-# Build directory
-builddir
 
 # Meson Files
 meson_benchmark_setup.dat
@@ -64,14 +68,10 @@ compile_commands.json
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,meson,go
+# End of https://www.toptal.com/developers/gitignore/api/go,meson,visualstudiocode,flatpak
 
 # Generated constants.go
 example/constants/constants.go
 
 # .mo files
 *.mo
-
-## flatpak-builder folders
-.flatpak-builder
-repo
