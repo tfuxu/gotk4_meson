@@ -55,11 +55,6 @@ else
   go_bin = find_program(join_paths(go_root.stdout().strip(), 'bin', 'go'))
 endif
 
-module_sources = files(
-  'go.mod',
-  'go.sum'
-)
-
 # Install configuration data
 conf = configuration_data()
 conf.set('APP_ID', APPLICATION_ID)
@@ -74,14 +69,14 @@ conf.set('SOURCE_DIR', meson.current_source_dir())
 conf.set('BUILD_DIR', meson.current_build_dir())
 
 # Subdirs
+subdir('example')
 subdir('data')
 subdir('po')
-subdir('example')
 
-gotk4_meson_build_path = join_paths(meson.current_source_dir(), 'example')
+build_path = join_paths(meson.current_source_dir(), 'example')
 
 # Compile project
-go_build = custom_target(
+custom_target(
   'go-build',
   build_by_default: true,
   build_always_stale: true,
@@ -89,7 +84,7 @@ go_build = custom_target(
   console: true,
   install: true,
   install_dir: get_option('bindir'),
-  command: [go_bin, 'build', '-v', '-o', '@OUTPUT@', gotk4_meson_build_path]
+  command: [go_bin, 'build', '-v', '-o', '@OUTPUT@', build_path]
 )
 
 # Execute post-installation GTK/GNOME scripts
