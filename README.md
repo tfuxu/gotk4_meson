@@ -8,12 +8,12 @@ This repository showcases an example of compiling Gotk4 projects using Meson bui
 #### Prerequisites:
 
 - Flatpak Builder `flatpak-builder`
-- GNOME SDK runtime `org.gnome.Sdk//45`
-- GNOME Platform runtime `org.gnome.Platform//45`
+- GNOME SDK runtime `org.gnome.Sdk//46`
+- GNOME Platform runtime `org.gnome.Platform//46`
 
 Install required runtimes:
 ```shell
-flatpak install org.gnome.Sdk//45 org.gnome.Platform//45
+flatpak install org.gnome.Sdk//46 org.gnome.Platform//46
 ```
 
 #### Building Instructions:
@@ -38,7 +38,7 @@ flatpak-builder --install --system --force-clean repo/ build-aux/flatpak/io.gith
 
 The following packages are required to build this project:
 
-- Golang >= 1.18 `go`
+- Golang >= 1.21 `go`
 - Gtk4 `gtk4`
 - Meson `meson`
 - Ninja `ninja-build`
