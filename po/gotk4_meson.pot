@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gotk4_meson\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 12:58+0200\n"
+"POT-Creation-Date: 2024-04-06 20:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,36 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:4
+#: data/io.github.tfuxu.gotk4_meson.metainfo.xml.in.in:4
 msgid "gotk4_meson"
 msgstr ""
 
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:5
+#: data/io.github.tfuxu.gotk4_meson.metainfo.xml.in.in:5
 msgid "Example short description"
 msgstr ""
 
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:6
-msgid "tfuxu"
-msgstr ""
-
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:14
+#: data/io.github.tfuxu.gotk4_meson.metainfo.xml.in.in:16
 msgid "This is an example description."
 msgstr ""
 
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:21
-msgid "Cat no.1"
-msgstr ""
-
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:26
-msgid "Cat no.2"
-msgstr ""
-
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:31
-msgid "Cat no.3"
-msgstr ""
-
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:67
-#: data/io.github.tfuxu.gotk4_meson.appdata.xml.in.in:72
+#: data/io.github.tfuxu.gotk4_meson.metainfo.xml.in.in:68
+#: data/io.github.tfuxu.gotk4_meson.metainfo.xml.in.in:75
 msgid "This is a description of this release. (HTML formatting allowed)"
 msgstr ""
 
