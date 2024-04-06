@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <component type="desktop-application">
   <id>@APP_ID@</id>
-  <name>gotk4_meson</name>
+  <name translate="no">gotk4_meson</name>
   <summary>Example short description</summary>
-  <developer_name>tfuxu</developer_name>
+  <developer id="io.github.tfuxu">
+    <name translate="no">tfuxu</name>
+  </developer>
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <metadata_license>CC-BY-SA-4.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
@@ -26,6 +28,11 @@
     </screenshot>
   </screenshots>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#ffffff</color>
+    <color type="primary" scheme_preference="dark">#000000</color>
+  </branding>
+
   <url type="homepage">@PROJECT_URL@</url>
   <url type="bugtracker">@BUGTRACKER_URL@</url>
   <url type="help">@HELP_URL@</url>
@@ -37,32 +44,37 @@
   </kudos>
 
   <requires>
+    <internet>offline-only</internet>
     <display_length compare="ge">360</display_length>
   </requires>
 
-  <categories>
-    <category>Utility</category>
-  </categories>
-
-  <recommends>
+  <supports>
     <control>keyboard</control>
     <control>pointing</control>
     <control>touch</control>
-  </recommends>
+  </supports>
 
   <keywords>
     <keyword>GTK4</keyword>
-  </keywords>"
+  </keywords>
+
+  <custom>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
 
   <releases>
-    <release version="1.0.0" date="20xx-xx-xx" type="stable">
-      <description>
-        This is a description of this release. (HTML formatting allowed)
+    <release version="1.0.0" date="2024-01-29">
+      <description translate="no">
+        <p>
+          This is a description of this release. (HTML formatting allowed)
+        </p>
       </description>
     </release>
-    <release version="0.9.0" date="20xx-xx-xx" type="stable">
-      <description>
-        This is a description of this release. (HTML formatting allowed)
+    <release version="0.9.0" date="2023-04-13">
+      <description translate="no">
+        <p>
+          This is a description of this release. (HTML formatting allowed)
+        </p>
       </description>
     </release>
   </releases>
