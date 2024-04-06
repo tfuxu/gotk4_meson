@@ -19,12 +19,12 @@
   </description>
 
   <screenshots>
-    <screenshot type="default" width="328" height="366">
-      <image type="source">screenshots/screenshot-1.png</image>
+    <screenshot type="default">
+      <image type="source">https://github.com/tfuxu/gotk4_meson/blob/master/data/screenshots/screenshot-1.png</image>
     </screenshot>
 
-    <screenshot width="600" height="484">
-      <image type="source">screenshots/screenshot-2.png</image>
+    <screenshot>
+      <image type="source">https://github.com/tfuxu/gotk4_meson/blob/master/data/screenshots/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
