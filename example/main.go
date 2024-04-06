@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/tfuxu/gotk4_meson/example/constants"
+	"github.com/tfuxu/gotk4_meson/example/views/window"
 
 	"github.com/diamondburned/gotk4/pkg/gio/v2"
 	"github.com/diamondburned/gotk4/pkg/gtk/v4"
@@ -49,30 +50,6 @@ func main() {
 }
 
 func activate(app *gtk.Application, settings *gio.Settings) {
-	builder := gtk.NewBuilderFromResource(constants.RootPath + "/ui/main_window.ui")
-
-	window := builder.GetObject("main_window").Cast().(*gtk.ApplicationWindow)
-	window.SetApplication(app)
-	window.SetDefaultSize(
-		settings.Int("window-width"), settings.Int("window-height"),
-	)
-
-	window.ConnectUnrealize(func() {
-		saveWindowProps(window, settings)
-	})
-
-	button := builder.GetObject("example_button").Cast().(*gtk.Button)
-	button.ConnectClicked(func() {
-		println("Hi ^_^")
-	})
-
+	window := window.NewMainWindow(app, settings)
 	window.Show()
-}
-
-func saveWindowProps(window *gtk.ApplicationWindow, settings *gio.Settings) {
-	width, height := window.DefaultSize()
-
-	settings.SetInt("window-width", width)
-	settings.SetInt("window-height", height)
-	settings.SetBoolean("window-maximized", window.IsMaximized())
 }
